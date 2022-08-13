@@ -7,7 +7,7 @@
             @csrf
             <input type="text" name="email" placeholder="Email">
             @error('email')
-            <p>{{$message}}</p>
+            <p class="error">{{$message}}</p>
             @enderror
             <input type="password" name="password" placeholder="Password">
             <br>
