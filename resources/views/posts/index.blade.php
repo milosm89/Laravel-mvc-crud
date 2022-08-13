@@ -1,5 +1,5 @@
 @extends('components.layout')
-{{-- @extends('components.flash-message') --}}
+@extends('components.flash-message')
 @section('content')
 
 

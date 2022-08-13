@@ -31,7 +31,7 @@
                 </a>
             </li>
             <li>
-                <form method="POST" action="/logout">
+                <form class="logout-form" method="POST" action="/logout">
                     @csrf
                     <button type="submit">
                         <i class="fa fa-sign-out" aria-hidden="true"></i>
@@ -64,7 +64,7 @@
                         </a>
                     </li>
                     <li>
-                        <form method="POST" action="/logout">
+                        <form class="logout-form" method="POST" action="/logout">
                             @csrf
                             <button type="submit">
                                 <i class="fa fa-sign-out" aria-hidden="true"></i>

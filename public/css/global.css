@@ -34,6 +34,9 @@ li a {
 li a:hover {
   background-color: #111;
 }
+li .logout-form {
+  margin: 0px;
+}
 li form {
   width: auto;
 }
@@ -93,6 +96,9 @@ li form button {
 .nav-bar-mobile li {
   display: block;
   text-align: center;
+}
+.nav-bar-mobile li .logout-form {
+  margin: 0px;
 }
 .blog-wrapper {
   width: 80%;
@@ -327,6 +333,19 @@ li form button {
 }
 body {
   margin: 0px;
+}
+.session-message {
+  position: fixed;
+  top: 0%;
+  left: 40%;
+  background-color: orangered;
+  border-radius: 5px;
+}
+.session-message p {
+  font-size: 16px;
+  margin: 0px;
+  padding: 20px 30px;
+  color: white;
 }
 .error {
   margin: 0px;
