@@ -3,7 +3,7 @@
   display: flex;
   justify-content: end;
 }
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .nav-bar {
     display: none;
   }
@@ -48,7 +48,7 @@ li form button {
   display: none;
   background-color: #333;
 }
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .nav-bar-mobile {
     display: block;
   }
