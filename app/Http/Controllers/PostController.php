@@ -28,7 +28,6 @@ class PostController extends Controller
     // Store Post Data
     public function store(Request $request) {
         $formFields = $request->validate([
-            'user_id' => 'required',
             'title' => 'required',
             'text' => 'required'
         ]);
@@ -46,11 +45,13 @@ class PostController extends Controller
     }
     // Update Post Data
     public function update(Request $request, Post $post) {
+
         $formFields = $request->validate([
-            'user_id' => 'required',
             'title' => 'required',
             'text' => 'required'
         ]);
+
+        $formFields['user_id'] = auth()->id();
 
         $post->update($formFields);
         return redirect('/')->with('message', 'Post updated successfully!');
