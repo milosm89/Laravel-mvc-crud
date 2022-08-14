@@ -285,15 +285,20 @@ li form button {
 .manage-wrap .info-holder .button-wrap {
   width: 30%;
   display: flex;
+  justify-content: end;
 }
 @media (max-width: 600px) {
   .manage-wrap .info-holder .button-wrap {
     width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 10px;
   }
 }
 .manage-wrap .info-holder .edit-holder {
-  width: 50%;
-  display: inline-block;
+  width: auto;
+  display: flex;
+  justify-content: end;
+  margin-right: 15px;
 }
 .manage-wrap .info-holder .edit-holder a {
   background-color: green;
@@ -315,12 +320,19 @@ li form button {
   text-align: left;
 }
 .manage-wrap .info-holder .delete-holder {
-  width: 50%;
-  display: inline-block;
+  width: auto;
+  display: flex;
+  justify-content: end;
+}
+@media (max-width: 600px) {
+  .manage-wrap .info-holder .delete-holder {
+    justify-content: flex-start;
+  }
 }
 .manage-wrap .info-holder .delete-holder button {
   background-color: red;
   color: white;
+  height: 30px;
   padding: 6px 10px;
   border-radius: 4px;
   border: none;

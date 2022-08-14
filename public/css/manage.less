@@ -30,13 +30,19 @@
         .button-wrap {
             width: 30%;
             display: flex;
+            justify-content: end;
+
             @media (max-width: 600px) {
                 width: 100%;
+                justify-content: flex-start;
+                margin-bottom: 10px;
             }
         }
         .edit-holder {
-            width: 50%;
-            display: inline-block;
+            width: auto;
+            display: flex;
+            justify-content: end;
+            margin-right: 15px;
 
             a {
                 background-color: green;
@@ -48,6 +54,7 @@
                 border-radius: 4px;
                 border: none;
                 margin: 16px 0px;
+
                 @media (max-width: 600px) {
                    margin: 0px;
                 }
@@ -57,12 +64,19 @@
             text-align: left;
         }
         .delete-holder {
-            width: 50%;
-            display: inline-block;
+            width: auto;
+            display: flex;
+            justify-content: end;
+
+            @media (max-width: 600px) {
+
+                justify-content: flex-start;
+            }
         
             button {
                 background-color: red;
                 color: white;
+                height: 30px;
                 padding: 6px 10px;
                 border-radius: 4px;
                 border: none;
