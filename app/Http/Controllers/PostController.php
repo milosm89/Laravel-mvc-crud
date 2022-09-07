@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     // Show All Posts
     public function index() {
-        $posts = DB::select('select * from posts');
+        $posts = DB::table('posts')->orderBy('created_at', 'desc')->get();
         return view('posts.index', [
             'posts' => $posts
         ]);

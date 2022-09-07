@@ -5,9 +5,11 @@
 
 <div class="blog-wrapper">
   <h2>Posts</h2>
+  @if (auth()->id())
     <div class="btn-holder">
         <a href="posts/create">Create Post</a>
     </div>
+  @endif
   @if (count($posts) == 0)
     <p>Post dom't exists</p>
   @endif

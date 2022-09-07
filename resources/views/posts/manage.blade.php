@@ -3,6 +3,9 @@
 @section('content')
 <div class="manage-wrap">
     <h3>Manage Posts</h3>
+    @if (count($posts) == 0)
+        <h2>You don't have created post yet!</h2>
+    @endif
     @foreach ($posts as $post)
     <div class="info-holder">
         <div class="text-holder">
