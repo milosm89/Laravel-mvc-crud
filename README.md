@@ -5,8 +5,7 @@ PHP version: 8.1</br>
 
 Simply Laravel blog project with Docker.
 
-After the project has been created, you can navigate to the application directory and rename ".env.example" to ".env".</br>
-After that start Laravel Sail with </br>
+After the project has been created, you can navigate to the application directory and start Laravel Sail.</br>
 ./vendor/bin/sail up</br>
 In Docker open application and open Laravel container command line.</br>
 In command line enter</br>
