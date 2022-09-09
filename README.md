@@ -13,5 +13,7 @@ php artisan migrate:refresh --seed</br>
 to add migration and seed files.</br>
 In browser enter</br>
 http://localhost/
+For phpmyadmin in browser enter.</br>
+http://localhost:8001</br>
 
 
