@@ -3,6 +3,16 @@
 @section('content')
 <div class="manage-wrap">
     <h3>Manage Posts</h3>
+    <div class="delete-holder">
+        <form method="POST" action="/user/{{auth()->id()}}">
+            @csrf
+            
+            <button class="btn-red">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                Delete Account
+            </button>
+        </form>
+    </div>
     @if (count($posts) == 0)
         <h2>You don't have created post yet!</h2>
     @endif

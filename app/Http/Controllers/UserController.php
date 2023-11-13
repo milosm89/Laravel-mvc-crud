@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -56,5 +58,18 @@ class UserController extends Controller
         }
 
         return back()->withErrors(['email' => 'Invalid Credentials'])->onlyInput('email');
+    }
+
+    public function destroy(Request $request, $id) {
+
+        $users = User::find($id);
+        $data = $users->posts;
+        foreach ($data as $key) {
+            $key->delete();
+        }
+        $users->delete();
+        auth()->logout();
+        $request->session()->regenerateToken();
+        return redirect('/')->with('message', 'User deleted successfully!');
     }
 }

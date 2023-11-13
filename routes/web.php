@@ -41,4 +41,6 @@ Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 // Log in User 
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+// Delete User
+Route::post('/user/{user}', [UserController::class, 'destroy'])->middleware('auth');
 
